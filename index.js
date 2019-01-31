@@ -1,7 +1,7 @@
-let OSinfo = require('./modules/OSinfo');
-let EventEmitter = require('events').EventEmitter;
+const OSinfo = require('./modules/OSinfo');
+const EventEmitter = require('events').EventEmitter;
 
-let emitter = new EventEmitter();
+const emitter = new EventEmitter();
 emitter.on("beforeCommand", function (instruction) {
     console.log('You wrote: ' + instruction + ', trying to run command');
 });
@@ -10,12 +10,12 @@ emitter.on("afterCommand", function () {
 });
 
 process.stdin.setEncoding('utf-8');
-process.stdin.on('readable', function() {
-    let input = process.stdin.read();
-    if(input !== null) {
-        let instruction = input.trim();
+process.stdin.on('readable', function () {
+    const input = process.stdin.read();
+    if (input !== null) {
+        const instruction = input.trim();
         emitter.emit('beforeCommand', instruction);
-        switch(instruction) {
+        switch (instruction) {
             case '/exit':
                 process.stdout.write('Quitting app!\n');
                 process.exit();
