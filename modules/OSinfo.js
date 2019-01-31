@@ -9,13 +9,13 @@ colors.setTheme({
     uptime: 'green',
     name: 'yellow',
     dir: 'gray',
-  });
-  
+});
+
 function getOSinfo() {
     let type = os.type();
-    if(type === 'Darwin') {
+    if (type === 'Darwin') {
         type = 'OSX';
-    } else if(type === 'Windows_NT') {
+    } else if (type === 'Windows_NT') {
         type = 'Windows';
     }
     const release = os.release();
