@@ -9,8 +9,8 @@
       return  min + 'min : ' + sec + 'sec'  
   } else {
     const hour =  Math.floor(input / 3600);
-    let min = Math.floor((input - hour * 3600) / 60);
-    let sec = input - hour * 3600 - min * 60;
+    const min = Math.floor((input - hour * 3600) / 60);
+    const sec = input - hour * 3600 - min * 60;
     return  hour + 'h : ' + min + 'min : ' + sec + 'sec'  
   } 
 

@@ -1,6 +1,6 @@
-let os = require('os');
-let time = require('./timeConvert');
-let colors = require('colors');
+const os = require('os');
+const time = require('./timeConvert');
+const colors = require('colors');
 
 colors.setTheme({
     system: 'grey',
