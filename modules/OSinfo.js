@@ -1,6 +1,6 @@
-let os = require('os');
-let time = require('./timeConvert');
-let colors = require('colors');
+const os = require('os');
+const time = require('./timeConvert');
+const colors = require('colors');
 
 colors.setTheme({
     system: 'grey',
@@ -9,13 +9,13 @@ colors.setTheme({
     uptime: 'green',
     name: 'yellow',
     dir: 'gray',
-  });
-  
+});
+
 function getOSinfo() {
     let type = os.type();
-    if(type === 'Darwin') {
+    if (type === 'Darwin') {
         type = 'OSX';
-    } else if(type === 'Windows_NT') {
+    } else if (type === 'Windows_NT') {
         type = 'Windows';
     }
     const release = os.release();
